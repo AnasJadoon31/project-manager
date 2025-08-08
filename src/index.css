@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+@layer utilities {
+    .margin-center {
+        margin: 5% auto;
+    }
+    .margin-center-home {
+        margin: 15% auto;
+    }
+}
