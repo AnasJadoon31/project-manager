@@ -1,5 +1,6 @@
 import {useState} from "react";
 import Input from "./Input.jsx";
+import ThemeButton from "./ThemeButton.jsx";
 
 export default function AddProject({addProjects, setScreen}) {
 
@@ -50,12 +51,7 @@ export default function AddProject({addProjects, setScreen}) {
             >
                 Cancel
             </button>
-            <button className="bg-stone-700 w-auto min-w-20 p-2 rounded-2xl
-        hover:bg-stone-500 text-stone-300 cursor-pointer"
-                    onClick={onSave}
-            >
-                Save
-            </button>
+            <ThemeButton buttonAction={onSave}>Save</ThemeButton>
         </div>
     </div>);
 }

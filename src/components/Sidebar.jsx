@@ -1,4 +1,5 @@
 import ProjectButton from "./ProjectButton.jsx";
+import ThemeButton from "./ThemeButton.jsx";
 
 export default function Sidebar({selectedProject, setScreen, projects, handleSelectProject, setTaskValue}) {
     const handleAddProject = () => {
@@ -8,13 +9,8 @@ export default function Sidebar({selectedProject, setScreen, projects, handleSel
     return (<div className="basis-1/4
      bg-stone-900 text-amber-50 w-100 max-h-screen min-h-screen p-4 rounded-e-2xl">
         <h1 className="flex justify-center text-2xl font-bold underline underline-offset-8">Your Projects</h1>
-        <button
-            className="flex mt-10 self-start justify-center bg-stone-700 w-30 p-2 rounded-2xl
-        hover:bg-stone-500 text-stone-300 cursor-pointer"
-            onClick={handleAddProject}
-        >
-            + Add Project
-        </button>
+        <ThemeButton design="mt-10 mb-5" buttonAction={handleAddProject}>+ Add Project</ThemeButton>
+
         <br className="mt-2"/>
         <div id="projects">
             {projects.length !== 0 ? projects.map((project, index) => (<ProjectButton
